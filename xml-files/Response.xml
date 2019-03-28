@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmployeeResponse 
+xmlns="http://wissensalt.com/Employee" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://wissensalt.com/Employee Employee.xsd">
+	<Employee>
+    	<id>1</id>
+        <code>code</code>
+        <name>name</name>
+        <remarks>remarks</remarks>
+	</Employee>
+</EmployeeResponse>

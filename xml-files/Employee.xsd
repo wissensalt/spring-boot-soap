@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema 
+xmlns="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://wissensalt.com/Employee" 
+xmlns:tns="http://wissensalt.com/Employee" elementFormDefault="qualified">
+	<element name="EmployeeRequest">
+		<complexType>
+			<sequence>
+				<element name="id" type="integer"></element>
+			</sequence>
+		</complexType>
+	</element>
+	
+	<element name="EmployeeResponse">
+		<complexType>
+			<sequence>
+				<element name="Employee" type="tns:Employee"></element>
+			</sequence>
+		</complexType>
+	</element>
+	<complexType name="Employee">
+		<sequence>
+			<element name="id" type="integer"></element>
+			<element name="code" type="string"></element>
+			<element name="name" type="string"></element>
+			<element name="remarks" type="string"></element>
+		</sequence>
+	</complexType>
+</schema>

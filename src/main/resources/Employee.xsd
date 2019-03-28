@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://wissensalt.com/Employee" 
+xmlns:tns="http://wissensalt.com/Employee" elementFormDefault="qualified">
+	<xs:element name="EmployeeRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" type="xs:integer" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="EmployeeResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Employee" type="tns:Employee" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="EmployeeFindAllRequest">
+		<xs:complexType>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="EmployeeFindAllResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Employee" type="tns:Employee" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="DeleteEmployeeRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" type="xs:integer" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="DeleteEmployeeResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="responseCode" type="xs:string" />
+				<xs:element name="responseMsg" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="InsertEmployeeRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="code" type="xs:string" />
+				<xs:element name="name" type="xs:string" />
+				<xs:element name="remarks" type="xs:string" />
+				<xs:element name="departmentId" type="xs:integer" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="InsertEmployeeResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="responseCode" type="xs:string" />
+				<xs:element name="responseMsg" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="UpdateEmployeeRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" type="xs:integer" />
+				<xs:element name="code" type="xs:string" />
+				<xs:element name="name" type="xs:string" />
+				<xs:element name="remarks" type="xs:string" />
+				<xs:element name="departmentId" type="xs:integer" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="UpdateEmployeeResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="responseCode" type="xs:string" />
+				<xs:element name="responseMsg" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="FindEmployeeCompleteRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" type="xs:integer" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="FindEmployeeCompleteResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" type="xs:integer" />
+				<xs:element name="code" type="xs:string" />
+				<xs:element name="name" type="xs:string" />
+				<xs:element name="remarks" type="xs:string" />
+				<xs:element name="department" type="tns:Department" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+
+	<xs:complexType name="Employee">
+		<xs:sequence>
+			<xs:element name="id" type="xs:integer" />
+			<xs:element name="code" type="xs:string" />
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="remarks" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Department">
+		<xs:sequence>
+			<xs:element name="id" type="xs:integer" />
+			<xs:element name="code" type="xs:string" />
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="remarks" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

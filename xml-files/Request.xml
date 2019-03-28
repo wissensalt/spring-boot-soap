@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmployeeRequest 
+	xmlns="http://wissensalt.com/Employee"  
+	xsi:schemaLocation="http://wissensalt.com/Employee Employee.xsd"  
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<id>1</id>
+</EmployeeRequest>
